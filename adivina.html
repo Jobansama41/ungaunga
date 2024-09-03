@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body class="adivina">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h1 class="pitufo">Adivina el anime</h1>
+        <h3 class="tituloOculto" >Elige un tema</h3>
+        <div class="temas">
+            <input type="button" class="tema" id="a" onclick="simbolo()" value="Simbolos">
+            <input type="button" class="tema" id="b" onclick="ojo()" value="Ojos">
+            <input type="button" class="tema" id="c" onclick="objeto()" value="Objetos">
+            <input type="button" class="tema" id="d" onclick="audio()" value="Audio">
+            <div class="nivel simbolo">
+                <h3 class="subtitulo">Niveles</h3>
+                <h2 class="puntos" name="jojo1">Puntos:0</h2>
+                <div class="level1 palo" onclick="nivelsim(1)" name="1">Nivel 1</div>
+                <div class="level1 palo oculto" name="oculto1">Nivel 1</div>
+                <div class="level2 palo" onclick="nivelsim(2)" name="2">Nivel 2</div>
+                <div class="level2 palo oculto" name="oculto2">Nivel 2</div>
+                <div class="level3 palo" onclick="nivelsim(3)" name="3">Nivel 3</div>
+                <div class="level3 palo oculto" name="oculto3">Nivel 3</div>
+                <div class="level4 palo" onclick="nivelsim(4)" name="4">Nivel 4</div>
+                <div class="level4 palo oculto" name="oculto4">Nivel 4</div>
+                <div class="level5 palo" onclick="nivelsim(5)" name="5">Nivel 5</div>
+                <div class="level5 palo oculto" name="oculto5">Nivel 5</div>
+                <div class="level6 palo" onclick="nivelsim(6)" name="6">Nivel 6</div>
+                <div class="level6 palo oculto" name="oculto6">Nivel 6</div>
+                <div class="campo" name="campo1"></div>
+            </div>
+            <div class="nivel ojo">
+                <h3>Niveles</h3>
+                <h2 class="puntos" name="jojo2">Puntos:0</h2>
+                <p class="level1 palo" onclick="nivelojo(1)" name="7">Nivel 1</p>
+                <p class="level1 palo oculto" name="oculto7">Nivel 1</p>
+                <p class="level2 palo" onclick="nivelojo(2)" name="8">Nivel 2</p>
+                <p class="level2 palo oculto" name="oculto8">Nivel 2</p>
+                <p class="level3 palo" onclick="nivelojo(3)" name="9">Nivel 3</p>
+                <p class="level3 palo oculto" name="oculto9">Nivel 3</p>
+                <p class="level4 palo" onclick="nivelojo(4)" name="10">Nivel 4</p>
+                <p class="level4 palo oculto" name="oculto10">Nivel 4</p>
+                <p class="level5 palo" onclick="nivelojo(5)" name="11">Nivel 5</p>
+                <p class="level5 palo oculto" name="oculto11">Nivel 5</p>
+                <p class="level6 palo" onclick="nivelojo(6)" name="12">Nivel 6</p>
+                <p class="level6 palo oculto" name="oculto12">Nivel 6</p>
+                <div class="campo" name="campo2"></div>
+            </div>
+            <div class="nivel objeto">
+                <h3>Niveles</h3>
+                <h2 class="puntos" name="jojo3">Puntos:0</h2>
+                <p class="level1 palo" onclick="nivelobj(1)" name="13">Nivel 1</p>
+                <p class="level1 palo oculto" name="oculto13">Nivel 1</p>
+                <p class="level2 palo" onclick="nivelobj(2)" name="14">Nivel 2</p>
+                <p class="level2 palo oculto" name="oculto14">Nivel 2</p>
+                <p class="level3 palo" onclick="nivelobj(3)" name="15">Nivel 3</p>
+                <p class="level3 palo oculto" name="oculto15">Nivel 3</p>
+                <p class="level4 palo" onclick="nivelobj(4)" name="16">Nivel 4</p>
+                <p class="level4 palo oculto" name="oculto16">Nivel 4</p>
+                <p class="level5 palo" onclick="nivelobj(5)" name="17">Nivel 5</p>
+                <p class="level5 palo oculto" name="oculto17">Nivel 5</p>
+                <p class="level6 palo" onclick="nivelobj(6)" name="18">Nivel 6</p>
+                <p class="level6 palo oculto" name="oculto18">Nivel 6</p>
+                <div class="campo" name="campo3"></div>
+            </div>
+            <div class="nivel audio">
+                <h3>Niveles</h3>
+                <h2 class="puntos" name="jojo4">Puntos:0</h2>
+                <p class="level1 palo" onclick="nivelaud(1)">Nivel 1</p>
+                <p class="level1 palo oculto">Nivel 1</p>
+                <p class="level2 palo" onclick="nivelaud(2)">Nivel 2</p>
+                <p class="level2 palo oculto">Nivel 2</p>
+                <p class="level3 palo" onclick="nivelaud(3)">Nivel 3</p>
+                <p class="level3 palo oculto">Nivel 3</p>
+                <p class="level4 palo" onclick="nivelaud(4)">Nivel 4</p>
+                <p class="level4 palo oculto">Nivel 4</p>
+                <p class="level5 palo" onclick="nivelaud(5)">Nivel 5</p>
+                <p class="level5 palo oculto">Nivel 5</p>
+                <p class="level6 palo" onclick="nivelaud(6)">Nivel 6</p>
+                <p class="level6 palo oculto">Nivel 6</p>
+                <div class="campo" name="campo4"></div>
+            </div>
+            <input type="button" class="final cambiar" value="Cambiar tema" onclick="cambiarTema()">
+        </div>
+        <br><br>
+        <a class="final" href="Menu.html" style="text-decoration: none;">Volver al menu</a>
+        <script src="java.js" async defer></script>
+    </body>
+</html>
